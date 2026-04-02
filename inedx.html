@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Milagros ❤️</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        cursive: ['Dancing Script', 'cursive'],
+                    },
+                    colors: {
+                        'rose-custom': '#ffb6c1',
+                        'bg-soft': '#fdf2f8',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        body {
+            background: linear-gradient(135deg, #fdf2f8 0%, #fff1f2 50%, #fef2f2 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Glassmorphism Classes */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.4);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.2);
+        }
+
+        /* Floating Hearts Animation Container */
+        #hearts-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .heart {
+            position: absolute;
+            bottom: -50px;
+            font-size: 24px;
+            color: rgba(255, 150, 180, 0.6);
+            animation: floatUp linear forwards;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(0) scale(0.5) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 1;
+            }
+            90% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-110vh) scale(1.2) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .content-section {
+            position: relative;
+            z-index: 10;
+        }
+        
+        /* Ocultar elementos antes de animarlos */
+        .motion-hidden {
+            opacity: 0;
+            visibility: hidden;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased selection:bg-rose-200 selection:text-rose-900">
+
+    <!-- Contenedor de corazones flotantes de fondo -->
+    <div id="hearts-container"></div>
+
+    <main class="max-w-2xl mx-auto px-6 py-12 md:py-24 flex flex-col items-center justify-center space-y-24 content-section">
+        
+        <!-- Sección 1: Introducción -->
+        <section id="sec-1" class="motion-hidden w-full flex flex-col items-center text-center space-y-6 pt-10">
+            <p class="text-rose-400 text-sm tracking-widest uppercase font-medium">Pour une personne très spéciale / For someone special</p>
+            <h1 class="font-cursive text-6xl md:text-7xl text-rose-500 drop-shadow-sm">Hola, Milagros</h1>
+            <div class="w-16 h-1 bg-rose-200 rounded-full mx-auto"></div>
+            <p class="text-gray-600 italic">"Tu as un charme fou" ✨</p>
+        </section>
+
+        <!-- Sección 2: El contexto (Raro pero sincero) -->
+        <section id="sec-2" class="motion-hidden glass-card w-full rounded-3xl p-8 md:p-10 text-center relative overflow-hidden">
+            <div class="absolute -top-10 -right-10 text-rose-100 opacity-50 text-9xl font-cursive">"</div>
+            <div class="space-y-4 relative z-10 text-lg md:text-xl text-gray-700 font-light leading-relaxed">
+                <p>
+                    Sé que últimamente has notado que estoy un poco raro jaja, y tienes toda la razón. 
+                    Quería hacer esto porque necesitaba expresarte lo que siento, pero por favor, <span class="font-medium text-rose-500">no quiero que te asustes ni sentir que te presiono</span>. 
+                </p>
+                <p class="text-gray-500 italic text-base">
+                    No pressure at all, just my honest feelings. 
+                </p>
+                <p>
+                    Jamais je n'aurais cru ressentir cela... Nunca esperé sentirme de esta manera por alguien, fue una sorpresa hermosa. 
+                    Pero mírame, aquí estamos, construyendo algo que valoro inmensamente.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección 3: Imagen y Momentos -->
+        <section id="sec-3" class="motion-hidden w-full flex flex-col items-center space-y-12">
+            <!-- La Foto -->
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-rose-300 to-pink-300 rounded-3xl blur opacity-30 group-hover:opacity-60 transition duration-1000 group-hover:duration-200"></div>
+                
+                <!-- 👇 AQUÍ DEBES PONER EL NOMBRE EXACTO DE TU FOTO 👇 -->
+                <img 
+                    src="milagros.jpg" 
+                    alt="Milagros" 
+                    class="relative rounded-3xl w-72 md:w-80 h-auto object-cover shadow-2xl border-4 border-white transform transition duration-500 hover:scale-[1.02] bg-gray-100 min-h-[300px]"
+                >
+
+                <div class="absolute -bottom-4 -left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-2xl shadow-lg transform -rotate-6 border border-rose-100 z-20">
+                    <span class="text-rose-500 font-cursive text-xl">Beautiful 🤍</span>
+                </div>
+                <div class="absolute -bottom-5 -right-5 text-4xl transform rotate-12 z-20">✨</div>
+            </div>
+
+            <!-- Los Momentos -->
+            <div class="glass-card w-full rounded-3xl p-8 md:p-10 text-center space-y-6">
+                <p class="text-lg md:text-xl leading-relaxed text-gray-700 font-light">
+                    Me encanta cada salida que compartimos. Cada vez que nos vemos, esos <strong class="text-rose-400 font-medium">abrazos</strong> que nos damos y esos <strong class="text-rose-400 font-medium">besos</strong>... 
+                    <span class="italic text-gray-500 block mt-2">Every moment with you is magic.</span>
+                </p>
+                <div class="p-5 bg-white/50 rounded-2xl border border-white/60">
+                    <p class="text-gray-700">
+                        Y ni hablar de nuestras noches de series y películas por Meet. J'adore partager ces instants avec toi. Esas videollamadas son, sin duda, la mejor parte de mi día. 🍿💻
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 4: La Promesa (Soporte) -->
+        <section id="sec-4" class="motion-hidden glass-card w-full rounded-3xl p-8 md:p-10 text-center border-t-4 border-t-rose-400">
+            <h2 class="font-cursive text-4xl text-rose-500 mb-6">Ma promesse / My Promise</h2>
+            <div class="space-y-5 text-lg md:text-xl text-gray-700 font-light text-left md:text-center">
+                <p>
+                    Quiero que te quede algo súper claro: <strong class="text-gray-900">Te quiero muchísimo.</strong>
+                </p>
+                <p>
+                    <span class="text-rose-500 font-medium">Je serai toujours là pour toi.</span> I will always be by your side. 
+                    Quiero que sepas que jamás estarás sola. Siempre puedes confiar en mí, para las risas y para los momentos difíciles.
+                </p>
+                <div class="pt-4 border-t border-rose-100/50">
+                    <p>
+                        Si algún día sientes que el mundo pesa demasiado o hay un problema que no sabes cómo resolver, recuerda esto: <strong class="text-rose-400">yo estaré ahí para ayudarte a cargarlo o resolverlo por ti</strong>. 
+                        <span class="italic text-gray-500 block mt-2 text-base">I've got your back, unconditionally.</span>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección 5: Cierre -->
+        <section id="sec-5" class="motion-hidden w-full text-center pb-20">
+            <p class="font-cursive text-5xl md:text-6xl text-rose-500 mb-4">Merci d'exister.</p>
+            <p class="text-gray-500 text-sm tracking-widest mb-2">THANK YOU FOR BEING YOU</p>
+            <p class="text-rose-400 text-lg font-medium">Siempre contigo ❤️</p>
+        </section>
+
+    </main>
+
+    <!-- Importamos Motion (Vanilla JS de Framer Motion) -->
+    <script type="module">
+        import { animate, inView, stagger } from "https://cdn.jsdelivr.net/npm/motion@11.11.13/+esm";
+
+        // Función auxiliar para quitar la clase de oculto justo antes de animar
+        const prepareElement = (el) => {
+            el.classList.remove('motion-hidden');
+            el.style.opacity = '0';
+        };
+
+        // Animación Sección 1 (Título)
+        const sec1 = document.getElementById('sec-1');
+        prepareElement(sec1);
+        animate(
+            sec1, 
+            { opacity: [0, 1], y: [40, 0], scale: [0.95, 1] }, 
+            { duration: 1.2, easing: [0.22, 1, 0.36, 1], delay: 0.2 }
+        );
+
+        // Animación Sección 2 (Texto inesperado)
+        inView('#sec-2', ({ target }) => {
+            prepareElement(target);
+            animate(
+                target,
+                { opacity: [0, 1], x: [-30, 0] },
+                { duration: 1, easing: "ease-out" }
+            );
+        }, { margin: "-100px" });
+
+        // Animación Sección 3 (Foto y Momentos)
+        inView('#sec-3', ({ target }) => {
+            // Corrección: Hacemos visible el contenedor principal para que los hijos se puedan ver
+            target.classList.remove('motion-hidden');
+            target.style.opacity = '1'; 
+            
+            // Animamos la imagen y los momentos en secuencia (stagger)
+            const children = target.children;
+            animate(
+                children,
+                { opacity: [0, 1], y: [50, 0] },
+                { duration: 0.8, delay: stagger(0.3), easing: "ease-out" }
+            );
+        }, { margin: "-100px" });
+
+        // Animación Sección 4 (La Promesa)
+        inView('#sec-4', ({ target }) => {
+            prepareElement(target);
+            animate(
+                target,
+                { opacity: [0, 1], scale: [0.9, 1] },
+                { duration: 0.8, easing: [0.17, 0.55, 0.55, 1] }
+            );
+        }, { margin: "-100px" });
+
+        // Animación Sección 5 (Cierre)
+        inView('#sec-5', ({ target }) => {
+            prepareElement(target);
+            animate(
+                target,
+                { opacity: [0, 1], y: [20, 0] },
+                { duration: 1, easing: "ease-in-out" }
+            );
+        }, { margin: "-50px" });
+
+
+        // Efecto de Corazones Flotantes (Vanilla JS)
+        function createHeart() {
+            const container = document.getElementById('hearts-container');
+            const heart = document.createElement('div');
+            
+            // Variaciones de corazones
+            const hearts = ['❤️', '💖', '✨', '🌸', '💕'];
+            heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
+            
+            heart.classList.add('heart');
+            
+            // Posición y tamaño aleatorio
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = (Math.random() * 5 + 5) + 's'; // 5 a 10 segundos
+            heart.style.fontSize = (Math.random() * 15 + 10) + 'px'; // 10px a 25px
+            
+            container.appendChild(heart);
+            
+            // Eliminar el corazón cuando termine la animación para no saturar el DOM
+            setTimeout(() => {
+                heart.remove();
+            }, 10000);
+        }
+
+        // Crear un corazón cada 400ms
+        setInterval(createHeart, 400);
+
+    </script>
+</body>
+</html>
